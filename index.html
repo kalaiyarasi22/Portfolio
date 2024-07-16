@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <h1>SK</h1>
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Portfolio</a> </li>
+                    <li><a href="#">Contact</a> </li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FULL STACK DEVELOPER</p>
+                <h1>Hi, I'm <span>KALAIYARASI</span> <br>from PSNACET,TamilNadu</h1>
+            </div>
+        </div>
+    </div>
+   <!-----------about---------> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/photo8.jfif">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><br><br>
+                    <p>Energetic Electronics and Communication Engineering graduate with a passion for software engineering.  
+                        Collaborative team player with strong leadership skills. 
+                        Seeking opportunities to contribute to innovative projects and drive organizational growth.</p><br><br>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>                            
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>WEB DEVELOPER</span><br>Creating the web-page <br></li>                                
+                                <li><span>UI/UX</span><br>Designing the web-page <br></li>
+                                <li><span>IoT</span><br>Able to work on Real-Time projcets<br></li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>HIHG SCHOOL</span><br>Cheran Vidhyalaya Matric HR.Sce School <br></li>                                
+                                <li><span>HIGHER-SECONDARY</span><br>Cheran Vidhyalaya Matric HR.Sce School<br></li>
+                                <li><span>COLLEGE</span><br>PSNA College of Engineering and Technology<br></li>
+
+                            </ul>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontents){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
